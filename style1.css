@@ -1,0 +1,115 @@
+/* General font & body */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-top: 70px; /* offset for fixed navbar */
+  background: linear-gradient(to right, #ff69b4, #ffb6c1); /* pink gradient background */
+}
+
+/* Navbar gradient & style */
+.navbar-gradient {
+  background: linear-gradient(45deg, #8b008b, #ff1493); /* dark pink to hot pink */
+  height: 60px;
+}
+
+.navbar-gradient .navbar-brand, 
+.navbar-gradient .nav-link {
+  color: white !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar-gradient .nav-link:hover {
+  color: #ffe6f0 !important;
+}
+
+/* Card styling (smaller, neater version) */
+.about-card {
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  max-width: 300px; /* limit card width */
+  margin: 0 auto;   /* center align cards */
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.about-card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 200px; /* reduced from 250px */
+  object-fit: cover;
+}
+
+.about-card .card-body {
+  padding: 10px; /* slightly smaller padding */
+}
+
+.about-card .card-text {
+  font-size: 0.95rem; /* smaller text */
+  line-height: 1.4;
+  font-weight: bold; /* make text bold */
+}
+
+
+
+/* Titles */
+h1, h2 {
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #662447; /* deep pink-purple */
+  font-weight: bold;
+}
+
+/* Spacing for main content to prevent footer overlap */
+.container {
+  padding-bottom: 120px; /* ensures footer doesn’t overlap content */
+}
+
+/* Footer (Fixed, Centered, Translucent Glass Effect) */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(128, 0, 128, 0.8); /* translucent purple */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 1000;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer hr {
+  width: 60%;
+  margin: 5px auto;
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-card img {
+    height: 200px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sm(s) Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-gradient fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sm(s)</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Slider -->
+    <div id="carouselExampleAutoplaying" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pexels-annamw-1047442.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="pexels-doubleseven-736355.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="pexels-pixabay-256453.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Floating Search Box -->
+    <div class="floating-search">
+      <h5>Search Blog</h5>
+      <input type="text" class="form-control mb-2" placeholder="Type to search...">
+      <h6>Recent Posts</h6>
+      <ul class="list-unstyled">
+        <li><p>The Day The World <br>Became Still 😲.....</p><a href="blog.html">Read More</a></li>
+        <li><p>Life Under The Stars 🌙.....</p><a href="blog.html">Read More</a></li>
+        <li><p>Morning Reflections ☕.....</p><a href="blog.html">Read More</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Search Toggle Button -->
+    <button class="search-toggle-btn" onclick="toggleSearch()">🔍</button>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="blog-card card">
+            <div class="card-body">
+              <h5 class="card-title">My First Blog Post</h5>
+              <p class="card-text">This is a detailed preview of my first blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="blog.html">Read more...</a></p>
+            </div>
+          </div>
+
+          <div class="blog-card card">
+            <div class="card-body">
+              <h5 class="card-title">Another Interesting Post</h5>
+              <p class="card-text">Here is a short snippet of my second blog post. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. <a href="blog.html">Read more...</a></p>
+            </div>
+          </div>
+
+          <div class="blog-card card">
+            <div class="card-body">
+              <h5 class="card-title">Latest Thoughts</h5>
+              <p class="card-text">Some insights from my latest post. Curabitur pellentesque neque eget diam posuere porta. <a href="blog.html">Read more...</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <hr>
+      Designed By <strong>Sandra M.</strong> 
+      &copy; Copyright Reserved <br>
+      <a href="mailto:Sandramags1@gmail.com">Sandramags1@gmail.com</a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Carousel Auto Slide -->
+    <script>
+      var myCarousel = document.querySelector('#carouselExampleAutoplaying');
+      var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 2500,
+        ride: 'carousel'
+      });
+
+      // Toggle search panel visibility
+      function toggleSearch() {
+        const searchBox = document.querySelector('.floating-search');
+        searchBox.classList.toggle('active');
+      }
+    </script>
+
+  </body>
+</html>
